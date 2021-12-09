@@ -8,8 +8,16 @@
 
 :root {
   /* Global colors */
-  --global-color-back: #6dbedf;
-  --global-color-front: white;
+  --global-color-back: white;
+  --global-color-front: gray;
+
+  --global-baseline: calc(1rem / 3);
+  --global-whitespace-xxs: var(--global-baseline); /* = 5px */
+  --global-whitespace-xs: calc(var(--global-baseline) * 2); /* = 10px */
+  --global-whitespace-sm: calc(var(--global-baseline) * 3); /* = 15px */
+  --global-whitespace-md: calc(var(--global-baseline) * 4); /* = 20px */
+  --global-whitespace-lg: calc(var(--global-baseline) * 5); /* = 25px */
+  --global-whitespace-xl: calc(var(--global-baseline) * 6); /* = 30px */
 
   /* global page settings */
   --global-html-color: var(--global-color-front);
@@ -49,7 +57,11 @@ body {
   min-height: 100vh;
   justify-content: center;
   align-items: center;
-  flex-direction: column-reverse;
+  flex-direction: column;
+}
+
+h1 {
+  margin: 32px;
 }
 
 /*
@@ -136,12 +148,194 @@ body {
 \*------------------------------------*/
 
 /*
-    Component: //
+    Component: grid
 */
+
+.c-grid {
+  display: grid;
+  grid-gap: var(--global-whitespace-lg);
+  margin-bottom: var(--global-whitespace-md);
+}
+
+.c-grid__item {
+  box-shadow: var(--global-box-shadow);
+  background-color: #fff;
+  border: 1px solid red;
+  width: 100vw;
+}
+
+.c-train {
+  fill: #333333;
+}
+
+.c-train__door {
+  fill: red;
+}
+
+.c-train__wheels {
+  fill: #555555;
+}
+
+.c-rail {
+  fill: black;
+}
+
+@media screen and (min-width: 62em) {
+  .c-grid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .c-grid__item {
+    grid-column: 1 / -1;
+  }
+}
 
 /*------------------------------------*\
 #UTILITIES
 \*------------------------------------*/
+
+/*
+    Utilities: color
+    ---
+    Utility classes to put specific colors onto elements
+*/
+
+.u-color-neutral {
+  color: var(--global-color-neutral);
+}
+
+.u-color-neutral-dark {
+  color: var(--global-color-neutral-dark);
+}
+
+/*
+  Utilities: spacing
+  ---
+  Utility classes to put specific margins and paddings onto elements
+*/
+
+.u-pt-clear {
+  padding-top: 0 !important;
+}
+
+.u-mb-clear {
+  margin-bottom: 0 !important;
+}
+
+.u-mb-xxs {
+  margin-bottom: var(--global-whitespace-xxs) !important;
+}
+
+.u-mb-xs {
+  margin-bottom: var(--global-whitespace-xs) !important;
+}
+
+.u-mb-sm {
+  margin-bottom: var(--global-whitespace-sm) !important;
+}
+
+.u-mb-md {
+  margin-bottom: var(--global-whitespace-md) !important;
+}
+
+.u-mb-lg {
+  margin-bottom: var(--global-whitespace-lg) !important;
+}
+
+.u-mb-xl {
+  margin-bottom: var(--global-whitespace-xl) !important;
+}
+
+/*
+  Utilities: max-width
+  ---
+  Utility classes to put specific max widths onto elements
+*/
+
+.u-max-width-xs {
+  max-width: 27em !important;
+}
+
+.u-max-width-sm {
+  max-width: 39em !important;
+}
+
+.u-max-width-md {
+  max-width: 50em !important;
+}
+
+.u-max-width-lg {
+  max-width: 63.5em !important;
+}
+
+.u-max-width-none {
+  max-width: none !important;
+}
+
+/*
+  Utilities: align
+  ---
+  Utility classes align text or components
+*/
+
+.u-align-text-center {
+  text-align: center;
+}
+
+.u-align-center {
+  margin: 0 auto;
+}
+
+/*
+  Utilities: text
+  Utility classes to create smaller or bigger test
+*/
+
+.u-text-xs {
+  font-size: calc(11rem / var(--global-root-font-size));
+}
+
+.u-text-sm {
+  font-size: calc(13rem / var(--global-root-font-size));
+  line-height: calc(var(--global-baseline) * 4);
+}
+
+/*
+  Utilities: span
+  Utility classes to span grid items across the x and y axis
+*/
+
+/* x: horizontal */
+
+@media (min-width: 62em) {
+  .u-x-span-3-bp3 {
+    grid-column: span 3;
+  }
+
+  .u-x-span-4-bp3 {
+    grid-column: span 4;
+  }
+
+  .u-x-span-6-bp3 {
+    grid-column: span 6;
+  }
+
+  .u-x-span-8-bp3 {
+    grid-column: span 8;
+  }
+
+  .u-x-span-9-bp3 {
+    grid-column: span 9;
+  }
+}
+
+/* y: vertical */
+
+@media (min-width: 62em) {
+  .u-y-span-2-bp3 {
+    grid-row: span 2;
+  }
+}
 
 /*------------------------------------*\
 #MEDIA
