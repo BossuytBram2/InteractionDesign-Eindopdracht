@@ -7,4 +7,4 @@ const customHeaders = new Headers();
 // Add a few headers - UITZONDERING
 customHeaders.append('Accept', 'application/json');
 
-const getData = () => fetch(serverEndPoint, { headers: customHeaders }).then((r) => r.json());
+const getData = (url) => fetch(url, { headers: customHeaders }).then((r) => r.json());

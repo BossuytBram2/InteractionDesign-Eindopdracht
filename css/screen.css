@@ -60,8 +60,8 @@ body {
   flex-direction: column;
 }
 
-h1 {
-  margin: 32px;
+h2 {
+  margin: 0;
 }
 
 /*
@@ -153,15 +153,35 @@ h1 {
 
 .c-grid {
   display: grid;
-  grid-gap: var(--global-whitespace-lg);
-  margin-bottom: var(--global-whitespace-md);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0 var(--global-whitespace-lg);
+  margin: auto;
 }
 
 .c-grid__item {
   box-shadow: var(--global-box-shadow);
   background-color: #fff;
-  border: 1px solid red;
+  grid-column: 1 / -1;
+  /* border: 1px solid red; */
   width: 100vw;
+}
+.c-vehicle {
+  display: block;
+  margin: 0 auto;
+}
+.c-destination {
+  display: block;
+  margin-left: auto;
+  margin-right: 16px;
+  grid-column: span 2;
+}
+.c-platform {
+  display: block;
+  margin-right: auto;
+  margin-left: 16px;
+}
+
+.c-train-master {
 }
 
 .c-train {
@@ -180,16 +200,22 @@ h1 {
   fill: black;
 }
 
-@media screen and (min-width: 62em) {
-  .c-grid {
-    grid-template-columns: repeat(12, 1fr);
-  }
-
-  .c-grid__item {
-    grid-column: 1 / -1;
-  }
+.c-station {
+  margin: 0;
 }
 
+.c-clock {
+  margin: 0;
+}
+
+@media (min-width: 900px) {
+  .c-platform {
+    margin: auto;
+  }
+  .c-destination {
+    margin: auto;
+  }
+}
 /*------------------------------------*\
 #UTILITIES
 \*------------------------------------*/
@@ -326,6 +352,10 @@ h1 {
 
   .u-x-span-9-bp3 {
     grid-column: span 9;
+  }
+
+  .u-x-span-12-bp3 {
+    grid-column: span 12;
   }
 }
 
