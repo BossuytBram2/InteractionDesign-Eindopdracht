@@ -12,7 +12,83 @@
     <script src="script/app.js"></script>
   </head>
   <body>
-    <h1 class="js-clock c-clock"></h1>
+    <div class="js-clocks c-clocks">
+      <h1 class="js-clock c-clock">
+        <svg id="Clock-Master" class="c-clock-master" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <g id="Clock">
+            <g id="Clock-Body">
+              <path d="M100,20a80,80,0,1,0,80,80A80,80,0,0,0,100,20Zm0,158a78,78,0,1,1,78-78A78,78,0,0,1,100,178Z" transform="translate(0 0)" />
+              <g id="Clock-digits">
+                <rect x="98" y="160" width="4" height="16" />
+                <rect x="98" y="24" width="4" height="16" />
+                <rect x="128.69" y="163.69" width="2" height="6" transform="translate(-56.59 67.16) rotate(-24)" />
+                <rect x="69.31" y="30.31" width="2" height="6" transform="translate(-7.47 31.48) rotate(-24)" />
+                <rect x="106.63" y="169.6" width="2" height="6" transform="translate(-17.45 12.2) rotate(-6)" />
+                <rect x="91.37" y="24.4" width="2" height="6" transform="translate(-2.36 9.81) rotate(-6)" />
+                <rect x="114.18" y="168.4" width="2" height="6" transform="translate(-33.12 27.69) rotate(-12)" />
+                <rect x="83.82" y="25.6" width="2" height="6" transform="translate(-4.09 18.26) rotate(-12)" />
+                <rect x="121.56" y="166.43" width="2" height="6" transform="translate(-46.36 46.16) rotate(-18)" />
+                <rect x="76.44" y="27.57" width="2" height="6" transform="translate(-5.66 25.43) rotate(-18)" />
+                <rect x="132" y="150.89" width="4" height="16" transform="translate(-61.49 88.29) rotate(-30)" />
+                <rect x="64" y="33.11" width="4" height="16" transform="translate(-11.71 38.51) rotate(-30)" />
+                <rect x="158.06" y="139.91" width="2" height="6" transform="translate(-50.05 187.59) rotate(-54)" />
+                <rect x="39.94" y="54.09" width="2" height="6" transform="translate(-29.31 56.66) rotate(-54)" />
+                <rect x="141.91" y="156.06" width="2" height="6" transform="translate(-66.2 114.38) rotate(-36)" />
+                <rect x="56.09" y="37.94" width="2" height="6" transform="matrix(0.81, -0.59, 0.59, 0.81, -13.16, 41.38)" />
+                <rect x="147.85" y="151.25" width="2" height="6" transform="translate(-64.98 139.22) rotate(-42)" />
+                <rect x="50.15" y="42.75" width="2" height="6" transform="translate(-17.47 45.98) rotate(-42)" />
+                <rect x="153.25" y="145.85" width="2" height="6" transform="translate(-59.58 163.88) rotate(-48)" />
+                <rect x="44.75" y="48.15" width="2" height="6" transform="translate(-22.88 50.92) rotate(-48)" />
+                <rect x="156.89" y="126" width="4" height="16" transform="translate(-36.6 204.6) rotate(-60)" />
+                <rect x="39.11" y="58" width="4" height="16" transform="translate(-36.6 68.6) rotate(-60)" />
+                <rect x="171.6" y="104.63" width="2" height="6" transform="translate(47.52 268.03) rotate(-84)" />
+                <rect x="26.4" y="89.37" width="2" height="6" transform="translate(-67.33 109.96) rotate(-84)" />
+                <rect x="165.69" y="126.69" width="2" height="6" transform="translate(-19.59 229.22) rotate(-66)" />
+                <rect x="32.31" y="67.31" width="2" height="6" transform="translate(-44.47 72.14) rotate(-66)" />
+                <rect x="168.43" y="119.56" width="2" height="6" transform="translate(0.51 245.82) rotate(-72)" />
+                <rect x="29.57" y="74.44" width="2" height="6" transform="translate(-52.53 82.59) rotate(-72)" />
+                <rect x="170.4" y="112.18" width="2" height="6" transform="translate(23.11 258.89) rotate(-78)" />
+                <rect x="27.6" y="81.82" width="2" height="6" transform="translate(-60.32 95.16) rotate(-78)" />
+                <rect x="166" y="92" width="4" height="16" transform="translate(68 268) rotate(-90)" />
+                <rect x="30" y="92" width="4" height="16" transform="translate(-68 132) rotate(-90)" />
+                <rect x="165.69" y="67.31" width="2" height="6" transform="translate(170.26 251.18) rotate(-114)" />
+                <rect x="32.31" y="126.69" width="2" height="6" transform="translate(-71.62 212.87) rotate(-114)" />
+                <rect x="171.6" y="89.37" width="2" height="6" transform="translate(98.78 273.68) rotate(-96)" />
+                <rect x="26.4" y="104.63" width="2" height="6" transform="translate(-76.78 146.13) rotate(-96)" />
+                <rect x="170.4" y="81.82" width="2" height="6" transform="translate(124.07 270.12) rotate(-102)" />
+                <rect x="27.6" y="112.18" width="2" height="6" transform="translate(-78.12 167.09) rotate(-102)" />
+                <rect x="168.43" y="74.44" width="2" height="6" transform="translate(148.13 262.51) rotate(-108)" />
+                <rect x="29.57" y="119.56" width="2" height="6" transform="translate(-76.54 189.51) rotate(-108)" />
+                <rect x="156.89" y="58" width="4" height="16" transform="translate(181.18 236.6) rotate(-120)" />
+                <rect x="39.11" y="126" width="4" height="16" transform="translate(-54.38 236.6) rotate(-120)" />
+                <rect x="141.91" y="37.94" width="2" height="6" transform="translate(234.46 158.06) rotate(-144)" />
+                <rect x="56.09" y="156.06" width="2" height="6" transform="translate(9.79 321.3) rotate(-144)" />
+                <rect x="158.06" y="54.09" width="2" height="6" transform="translate(206.36 219.33) rotate(-126)" />
+                <rect x="39.94" y="139.91" width="2" height="6" transform="matrix(-0.59, -0.81, 0.81, -0.59, -50.61, 260.03)" />
+                <rect x="153.25" y="48.15" width="2" height="6" transform="translate(219.45 200.01) rotate(-132)" />
+                <rect x="44.75" y="145.85" width="2" height="6" transform="translate(-34.25 282.44) rotate(-132)" />
+                <rect x="147.85" y="42.75" width="2" height="6" transform="translate(228.85 179.35) rotate(-138)" />
+                <rect x="50.15" y="151.25" width="2" height="6" transform="translate(-14.05 303.11) rotate(-138)" />
+                <rect x="132" y="33.11" width="4" height="16" transform="translate(229.49 143.71) rotate(-150)" />
+                <rect x="64" y="150.89" width="4" height="16" transform="translate(43.71 329.49) rotate(-150)" />
+                <rect x="106.63" y="24.4" width="2" height="6" transform="matrix(-0.99, -0.1, 0.1, -0.99, 211.81, 65.9)" />
+                <rect x="91.37" y="169.6" width="2" height="6" transform="translate(166.19 353.91) rotate(-174)" />
+                <rect x="128.69" y="30.31" width="2" height="6" transform="translate(234.62 116.49) rotate(-156)" />
+                <rect x="69.31" y="163.69" width="2" height="6" transform="translate(66.74 347.56) rotate(-156)" />
+                <rect x="121.56" y="27.57" width="2" height="6" transform="translate(229.67 97.52) rotate(-162)" />
+                <rect x="76.44" y="166.43" width="2" height="6" transform="translate(98.74 354.49) rotate(-162)" />
+                <rect x="114.18" y="25.6" width="2" height="6" transform="translate(221.89 80.51) rotate(-168)" />
+                <rect x="83.82" y="168.4" width="2" height="6" transform="translate(132.15 356.7) rotate(-168)" />
+              </g>
+              <circle id="Clock-Center" cx="100" cy="100" r="5" />
+            </g>
+            <path id="Clock-Hours" d="M103,46H97q-1,37.5-2,75h10Q104,83.5,103,46Z" transform="translate(0 0)" />
+            <path id="Clock-Minutes" d="M101,32q1,44.51,2,89H97q1-44.5,2-89Z" transform="translate(0 0)" />
+            <path id="Clock-Seconds" class="c-clock-seconds" d="M99,66.93V95.62a4.49,4.49,0,0,0,0,8.76V113h2v-8.62a4.49,4.49,0,0,0,0-8.76V66.93a7.5,7.5,0,0,0,0-14.86V27H99V52.07a7.5,7.5,0,0,0,0,14.86ZM100,64a4.5,4.5,0,1,1,4.5-4.5A4.49,4.49,0,0,1,100,64Z" transform="translate(0 0)" />
+          </g>
+        </svg>
+      </h1>
+    </div>
     <h1 class="js-station c-station">Kortrijk</h1>
     <label for="stations">Choose a station:</label>
     <select name="stations" class="js-select c-select">

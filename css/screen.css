@@ -181,6 +181,14 @@ h2 {
   margin-left: 16px;
 }
 
+.c-clock-master {
+  height: 200px;
+}
+
+.c-clock-seconds {
+  fill: red;
+}
+
 .c-train-master {
 }
 
@@ -204,8 +212,13 @@ h2 {
   margin: 0;
 }
 
+.c-clocks {
+  display: flex;
+  height: 200px;
+}
+
 .c-clock {
-  margin: 0;
+  margin: auto;
 }
 
 @media (min-width: 900px) {
